@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
-
-import { DebugController } from './debug.controller';
-import { DebugService } from './debug.service';
+import { DebugController } from 'src/debug/debug.controller';
+import { DebugService } from 'src/debug/debug.service';
 
 @Module({
   controllers: [DebugController],

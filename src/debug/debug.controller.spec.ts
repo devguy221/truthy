@@ -1,7 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-
-import { DebugController } from './debug.controller';
-import { DebugService } from './debug.service';
+import { DebugController } from 'src/debug/debug.controller';
+import { DebugService } from 'src/debug/debug.service';
 
 describe('DebugController', () => {
   let controller: DebugController;

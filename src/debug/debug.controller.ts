@@ -1,24 +1,16 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Patch,
-  Post
-} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
+import { DebugService } from 'src/debug/debug.service';
+import { DebugLogDto } from 'src/debug/dto/debug-log.dto';
 
-import { DebugService } from './debug.service';
-import { CreateDebugDto } from './dto/create-debug.dto';
-import { UpdateDebugDto } from './dto/update-debug.dto';
-
+@ApiTags('debug')
 @Controller('debug')
 export class DebugController {
   constructor(private readonly debugService: DebugService) {}
 
-  @Post()
-  create(@Body() createDebugDto: CreateDebugDto) {
-    return this.debugService.create(createDebugDto);
+  @Post('log')
+  log(@Body() debugLogDto: DebugLogDto) {
+    return this.debugService.log(debugLogDto);
   }
 
   @Get()
@@ -29,11 +21,6 @@ export class DebugController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.debugService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateDebugDto: UpdateDebugDto) {
-    return this.debugService.update(+id, updateDebugDto);
   }
 
   @Delete(':id')
