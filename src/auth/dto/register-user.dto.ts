@@ -8,9 +8,8 @@ import {
   MinLength,
   Validate
 } from 'class-validator';
-
-import { UniqueValidatorPipe } from 'src/common/pipes/unique-validator.pipe';
 import { UserEntity } from 'src/auth/entity/user.entity';
+import { UniqueValidatorPipe } from 'src/common/pipes/unique-validator.pipe';
 
 /**
  * register user data transform object

@@ -1,7 +1,6 @@
-import { Column, Entity, Index, JoinTable, ManyToMany, Unique } from 'typeorm';
-
 import { CustomBaseEntity } from 'src/common/entity/custom-base.entity';
 import { PermissionEntity } from 'src/permission/entities/permission.entity';
+import { Column, Entity, Index, JoinTable, ManyToMany, Unique } from 'typeorm';
 
 @Entity({
   name: 'role'

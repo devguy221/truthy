@@ -1,13 +1,12 @@
-import { ThrottlerModule } from '@nestjs/throttler';
 import { INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
-import { createConnection, getConnection } from 'typeorm';
+import { ThrottlerModule } from '@nestjs/throttler';
+import * as config from 'config';
+import * as Redis from 'ioredis';
 import { ThrottlerStorageRedisService } from 'nestjs-throttler-storage-redis';
 import { RateLimiterRedis } from 'rate-limiter-flexible';
-import * as Redis from 'ioredis';
-import * as config from 'config';
-
 import { AppModule } from 'src/app.module';
+import { createConnection, getConnection } from 'typeorm';
 
 const dbConfig = config.get('db');
 

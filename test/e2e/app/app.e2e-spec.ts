@@ -1,5 +1,4 @@
 import * as request from 'supertest';
-
 import { AppFactory } from 'test/factories/app';
 
 describe('AppController (e2e)', () => {

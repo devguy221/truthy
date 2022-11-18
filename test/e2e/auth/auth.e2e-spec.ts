@@ -1,6 +1,5 @@
 import { HttpStatus } from '@nestjs/common';
 import * as request from 'supertest';
-
 import { AppFactory } from 'test/factories/app';
 import { RoleFactory } from 'test/factories/role.factory';
 import { UserFactory } from 'test/factories/user.factory';

@@ -1,24 +1,23 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { JwtService } from '@nestjs/jwt';
-import * as bcrypt from 'bcrypt';
 import { UnprocessableEntityException } from '@nestjs/common';
-
+import { JwtService } from '@nestjs/jwt';
+import { Test, TestingModule } from '@nestjs/testing';
+import * as bcrypt from 'bcrypt';
 import { AuthService } from 'src/auth/auth.service';
-import { UserRepository } from 'src/auth/user.repository';
+import { ChangePasswordDto } from 'src/auth/dto/change-password.dto';
 import { CreateUserDto } from 'src/auth/dto/create-user.dto';
+import { ForgetPasswordDto } from 'src/auth/dto/forget-password.dto';
+import { ResetPasswordDto } from 'src/auth/dto/reset-password.dto';
+import { UpdateUserProfileDto } from 'src/auth/dto/update-user-profile.dto';
 import { UserLoginDto } from 'src/auth/dto/user-login.dto';
 import { UserEntity } from 'src/auth/entity/user.entity';
-import { UpdateUserProfileDto } from 'src/auth/dto/update-user-profile.dto';
-import { ResetPasswordDto } from 'src/auth/dto/reset-password.dto';
-import { ForgetPasswordDto } from 'src/auth/dto/forget-password.dto';
-import { UserStatusEnum } from 'src/auth/user-status.enum';
-import { ChangePasswordDto } from 'src/auth/dto/change-password.dto';
-import { MailService } from 'src/mail/mail.service';
-import { RefreshTokenService } from 'src/refresh-token/refresh-token.service';
 import { UserSerializer } from 'src/auth/serializer/user.serializer';
-import { NotFoundException } from 'src/exception/not-found.exception';
+import { UserRepository } from 'src/auth/user.repository';
+import { UserStatusEnum } from 'src/auth/user-status.enum';
 import { CustomHttpException } from 'src/exception/custom-http.exception';
+import { NotFoundException } from 'src/exception/not-found.exception';
+import { MailService } from 'src/mail/mail.service';
 import { RefreshPaginateFilterDto } from 'src/refresh-token/dto/refresh-paginate-filter.dto';
+import { RefreshTokenService } from 'src/refresh-token/refresh-token.service';
 
 const mockUserRepository = () => ({
   findOne: jest.fn(),

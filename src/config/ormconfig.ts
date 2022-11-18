@@ -1,5 +1,5 @@
-import { ConnectionOptions } from 'typeorm';
 import * as config from 'config';
+import { ConnectionOptions } from 'typeorm';
 
 const dbConfig = config.get('db');
 const ormConfig: ConnectionOptions = {

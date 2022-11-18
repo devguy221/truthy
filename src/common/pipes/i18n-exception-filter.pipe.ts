@@ -6,12 +6,11 @@ import {
   HttpStatus,
   Inject
 } from '@nestjs/common';
-import { I18nService } from 'nestjs-i18n';
-
-import { ValidationErrorInterface } from 'src/common/interfaces/validation-error.interface';
-import { StatusCodesList } from 'src/common/constants/status-codes-list.constants';
-import { Logger } from 'winston';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
+import { I18nService } from 'nestjs-i18n';
+import { StatusCodesList } from 'src/common/constants/status-codes-list.constants';
+import { ValidationErrorInterface } from 'src/common/interfaces/validation-error.interface';
+import { Logger } from 'winston';
 
 @Catch(HttpException)
 export class I18nExceptionFilterPipe implements ExceptionFilter {

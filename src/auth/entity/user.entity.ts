@@ -1,3 +1,8 @@
+import * as bcrypt from 'bcrypt';
+import { Exclude } from 'class-transformer';
+import { UserStatusEnum } from 'src/auth/user-status.enum';
+import { CustomBaseEntity } from 'src/common/entity/custom-base.entity';
+import { RoleEntity } from 'src/role/entities/role.entity';
 import {
   BeforeInsert,
   BeforeUpdate,
@@ -8,12 +13,6 @@ import {
   JoinColumn,
   OneToOne
 } from 'typeorm';
-import * as bcrypt from 'bcrypt';
-import { Exclude } from 'class-transformer';
-
-import { UserStatusEnum } from 'src/auth/user-status.enum';
-import { CustomBaseEntity } from 'src/common/entity/custom-base.entity';
-import { RoleEntity } from 'src/role/entities/role.entity';
 
 /**
  * User Entity

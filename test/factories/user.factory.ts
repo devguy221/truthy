@@ -1,10 +1,9 @@
-import { getRepository } from 'typeorm';
 import { faker } from '@faker-js/faker';
 import * as bcrypt from 'bcrypt';
-
 import { UserEntity } from 'src/auth/entity/user.entity';
 import { UserStatusEnum } from 'src/auth/user-status.enum';
 import { RoleEntity } from 'src/role/entities/role.entity';
+import { getRepository } from 'typeorm';
 
 export class UserFactory {
   private role: RoleEntity;

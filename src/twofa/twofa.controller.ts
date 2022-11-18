@@ -11,7 +11,6 @@ import {
   UseGuards
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-
 import { AuthService } from 'src/auth/auth.service';
 import { UserEntity } from 'src/auth/entity/user.entity';
 import { GetUser } from 'src/common/decorators/get-user.decorator';

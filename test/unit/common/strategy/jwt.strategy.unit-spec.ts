@@ -1,9 +1,8 @@
 import { Test } from '@nestjs/testing';
-
-import { JwtStrategy } from 'src/common/strategy/jwt.strategy';
-import { UserRepository } from 'src/auth/user.repository';
-import { UserEntity } from 'src/auth/entity/user.entity';
 import { JwtPayloadDto } from 'src/auth/dto/jwt-payload.dto';
+import { UserEntity } from 'src/auth/entity/user.entity';
+import { UserRepository } from 'src/auth/user.repository';
+import { JwtStrategy } from 'src/common/strategy/jwt.strategy';
 import { UnauthorizedException } from 'src/exception/unauthorized.exception';
 
 const mockUserRepository = () => ({

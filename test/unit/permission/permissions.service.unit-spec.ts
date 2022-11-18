@@ -1,13 +1,12 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { UnprocessableEntityException } from '@nestjs/common';
-
-import { PermissionsService } from 'src/permission/permissions.service';
+import { Test, TestingModule } from '@nestjs/testing';
 import { MethodList } from 'src/config/permission-config';
-import { PermissionRepository } from 'src/permission/permission.repository';
-import { PermissionFilterDto } from 'src/permission/dto/permission-filter.dto';
-import { CreatePermissionDto } from 'src/permission/dto/create-permission.dto';
-import { UpdatePermissionDto } from 'src/permission/dto/update-permission.dto';
 import { NotFoundException } from 'src/exception/not-found.exception';
+import { CreatePermissionDto } from 'src/permission/dto/create-permission.dto';
+import { PermissionFilterDto } from 'src/permission/dto/permission-filter.dto';
+import { UpdatePermissionDto } from 'src/permission/dto/update-permission.dto';
+import { PermissionRepository } from 'src/permission/permission.repository';
+import { PermissionsService } from 'src/permission/permissions.service';
 
 const permissionRepositoryMock = () => ({
   getAll: jest.fn(),
