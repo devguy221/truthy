@@ -1,16 +1,15 @@
+import { RequestMethod, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
-import { useContainer } from 'class-validator';
-import * as config from 'config';
-import helmet from 'helmet';
 import {
   DocumentBuilder,
   SwaggerCustomOptions,
   SwaggerModule
 } from '@nestjs/swagger';
+import { useContainer } from 'class-validator';
+import * as config from 'config';
 import * as cookieParser from 'cookie-parser';
+import helmet from 'helmet';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
-
 import { AppModule } from 'src/app.module';
 
 async function bootstrap() {
@@ -19,6 +18,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(helmet());
   app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
+  app.setGlobalPrefix('api', {
+    exclude: [{ path: 'health', method: RequestMethod.GET }]
+  });
   const apiConfig = config.get('app');
   if (process.env.NODE_ENV === 'development') {
     app.enableCors({

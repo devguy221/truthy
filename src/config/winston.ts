@@ -1,8 +1,8 @@
-import * as winston from 'winston';
 import {
   utilities as nestWinstonModuleUtilities,
   WinstonModuleOptions
 } from 'nest-winston';
+import * as winston from 'winston';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -22,8 +22,7 @@ export default {
     : new winston.transports.Console({
         format: winston.format.combine(
           winston.format.timestamp(),
-          winston.format.ms(),
-          nestWinstonModuleUtilities.format.nestLike('Truthy Logger', {
+          nestWinstonModuleUtilities.format.nestLike('', {
             prettyPrint: true
           })
         )

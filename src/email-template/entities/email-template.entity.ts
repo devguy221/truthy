@@ -1,6 +1,5 @@
-import { Column, Entity, Index } from 'typeorm';
-
 import { CustomBaseEntity } from 'src/common/entity/custom-base.entity';
+import { Column, Entity, Index } from 'typeorm';
 
 @Entity({
   name: 'email_templates'

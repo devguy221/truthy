@@ -12,15 +12,14 @@ import {
   UseGuards
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiQuery, ApiTags } from '@nestjs/swagger';
-
-import { PermissionsService } from 'src/permission/permissions.service';
-import { CreatePermissionDto } from 'src/permission/dto/create-permission.dto';
-import { UpdatePermissionDto } from 'src/permission/dto/update-permission.dto';
-import { PermissionFilterDto } from 'src/permission/dto/permission-filter.dto';
-import { Permission } from 'src/permission/serializer/permission.serializer';
+import JwtTwoFactorGuard from 'src/common/guard/jwt-two-factor.guard';
 import { PermissionGuard } from 'src/common/guard/permission.guard';
 import { Pagination } from 'src/paginate';
-import JwtTwoFactorGuard from 'src/common/guard/jwt-two-factor.guard';
+import { CreatePermissionDto } from 'src/permission/dto/create-permission.dto';
+import { PermissionFilterDto } from 'src/permission/dto/permission-filter.dto';
+import { UpdatePermissionDto } from 'src/permission/dto/update-permission.dto';
+import { PermissionsService } from 'src/permission/permissions.service';
+import { Permission } from 'src/permission/serializer/permission.serializer';
 
 @ApiTags('permissions')
 @UseGuards(JwtTwoFactorGuard, PermissionGuard)

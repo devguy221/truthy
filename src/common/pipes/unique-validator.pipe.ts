@@ -1,9 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectConnection } from '@nestjs/typeorm';
 import { ValidatorConstraint } from 'class-validator';
-import { Connection } from 'typeorm';
-
 import { AbstractUniqueValidator } from 'src/common/pipes/abstract-unique-validator';
+import { Connection } from 'typeorm';
 
 /**
  * unique validator pipe

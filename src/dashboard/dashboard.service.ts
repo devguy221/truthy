@@ -1,10 +1,9 @@
 import { Injectable } from '@nestjs/common';
-
-import { UserStatusEnum } from 'src/auth/user-status.enum';
 import { AuthService } from 'src/auth/auth.service';
-import { UsersStatsInterface } from 'src/dashboard/interface/user-stats.interface';
+import { UserStatusEnum } from 'src/auth/user-status.enum';
 import { BrowserStatsInterface } from 'src/dashboard/interface/browser-stats.interface';
 import { OsStatsInterface } from 'src/dashboard/interface/os-stats.interface';
+import { UsersStatsInterface } from 'src/dashboard/interface/user-stats.interface';
 
 @Injectable()
 export class DashboardService {

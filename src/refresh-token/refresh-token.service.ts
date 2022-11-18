@@ -1,24 +1,23 @@
 import { forwardRef, HttpStatus, Inject, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
-import { FindManyOptions, MoreThanOrEqual } from 'typeorm';
-import { SignOptions, TokenExpiredError } from 'jsonwebtoken';
 import * as config from 'config';
-
-import { CustomHttpException } from 'src/exception/custom-http.exception';
+import { SignOptions, TokenExpiredError } from 'jsonwebtoken';
 import { AuthService } from 'src/auth/auth.service';
 import { UserSerializer } from 'src/auth/serializer/user.serializer';
 import { ExceptionTitleList } from 'src/common/constants/exception-title-list.constants';
 import { StatusCodesList } from 'src/common/constants/status-codes-list.constants';
+import { CustomHttpException } from 'src/exception/custom-http.exception';
 import { ForbiddenException } from 'src/exception/forbidden.exception';
 import { NotFoundException } from 'src/exception/not-found.exception';
+import { Pagination } from 'src/paginate';
+import { PaginationInfoInterface } from 'src/paginate/pagination-info.interface';
+import { RefreshPaginateFilterDto } from 'src/refresh-token/dto/refresh-paginate-filter.dto';
 import { RefreshToken } from 'src/refresh-token/entities/refresh-token.entity';
 import { RefreshTokenInterface } from 'src/refresh-token/interface/refresh-token.interface';
 import { RefreshTokenRepository } from 'src/refresh-token/refresh-token.repository';
-import { RefreshPaginateFilterDto } from 'src/refresh-token/dto/refresh-paginate-filter.dto';
-import { PaginationInfoInterface } from 'src/paginate/pagination-info.interface';
 import { RefreshTokenSerializer } from 'src/refresh-token/serializer/refresh-token.serializer';
-import { Pagination } from 'src/paginate';
+import { FindManyOptions, MoreThanOrEqual } from 'typeorm';
 
 const appConfig = config.get('app');
 const tokenConfig = config.get('jwt');

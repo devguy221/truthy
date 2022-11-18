@@ -1,14 +1,13 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { UnprocessableEntityException } from '@nestjs/common';
-
-import { RolesService } from 'src/role/roles.service';
-import { RoleRepository } from 'src/role/role.repository';
-import { RoleFilterDto } from 'src/role/dto/role-filter.dto';
-import { CreateRoleDto } from 'src/role/dto/create-role.dto';
-import { NotFoundException } from 'src/exception/not-found.exception';
-import { UpdateRoleDto } from 'src/role/dto/update-role.dto';
-import { PermissionsService } from 'src/permission/permissions.service';
+import { Test, TestingModule } from '@nestjs/testing';
 import { MethodList } from 'src/config/permission-config';
+import { NotFoundException } from 'src/exception/not-found.exception';
+import { PermissionsService } from 'src/permission/permissions.service';
+import { CreateRoleDto } from 'src/role/dto/create-role.dto';
+import { RoleFilterDto } from 'src/role/dto/role-filter.dto';
+import { UpdateRoleDto } from 'src/role/dto/update-role.dto';
+import { RoleRepository } from 'src/role/role.repository';
+import { RolesService } from 'src/role/roles.service';
 
 const roleRepositoryMock = () => ({
   findAll: jest.fn(),

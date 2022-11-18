@@ -1,13 +1,12 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { UnprocessableEntityException } from '@nestjs/common';
-
-import { EmailTemplateService } from 'src/email-template/email-template.service';
-import { EmailTemplateRepository } from 'src/email-template/email-template.repository';
-import { EmailTemplatesSearchFilterDto } from 'src/email-template/dto/email-templates-search-filter.dto';
+import { Test, TestingModule } from '@nestjs/testing';
 import { CreateEmailTemplateDto } from 'src/email-template/dto/create-email-template.dto';
+import { EmailTemplatesSearchFilterDto } from 'src/email-template/dto/email-templates-search-filter.dto';
 import { UpdateEmailTemplateDto } from 'src/email-template/dto/update-email-template.dto';
-import { NotFoundException } from 'src/exception/not-found.exception';
+import { EmailTemplateRepository } from 'src/email-template/email-template.repository';
+import { EmailTemplateService } from 'src/email-template/email-template.service';
 import { ForbiddenException } from 'src/exception/forbidden.exception';
+import { NotFoundException } from 'src/exception/not-found.exception';
 
 const emailTemplateRepositoryMock = () => ({
   getAll: jest.fn(),

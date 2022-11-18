@@ -1,6 +1,3 @@
-import { Logger } from '@nestjs/common';
-import * as config from 'config';
-import { MailerService } from '@nestjs-modules/mailer';
 import {
   OnQueueActive,
   OnQueueCompleted,
@@ -8,8 +5,10 @@ import {
   Process,
   Processor
 } from '@nestjs/bull';
+import { Logger } from '@nestjs/common';
+import { MailerService } from '@nestjs-modules/mailer';
 import { Job } from 'bull';
-
+import * as config from 'config';
 import { MailJobInterface } from 'src/mail/interface/mail-job.interface';
 
 @Processor(config.get('mail.queueName'))

@@ -1,10 +1,9 @@
 import { Test } from '@nestjs/testing';
 import { getConnectionToken } from '@nestjs/typeorm';
-import { Connection } from 'typeorm';
-
-import { UniqueValidatorPipe } from 'src/common/pipes/unique-validator.pipe';
 import { UserEntity } from 'src/auth/entity/user.entity';
 import { UniqueValidationArguments } from 'src/common/pipes/abstract-unique-validator';
+import { UniqueValidatorPipe } from 'src/common/pipes/unique-validator.pipe';
+import { Connection } from 'typeorm';
 
 const mockConnection = () => ({
   getRepository: jest.fn(() => ({

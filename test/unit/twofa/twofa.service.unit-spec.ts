@@ -1,10 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { authenticator } from 'otplib';
-
-import { TwofaService } from 'src/twofa/twofa.service';
 import { AuthService } from 'src/auth/auth.service';
 import { UserEntity } from 'src/auth/entity/user.entity';
 import { CustomHttpException } from 'src/exception/custom-http.exception';
+import { TwofaService } from 'src/twofa/twofa.service';
 
 const authServiceMock = () => ({
   setTwoFactorAuthenticationSecret: jest.fn()

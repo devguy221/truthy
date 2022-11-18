@@ -1,16 +1,15 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { JwtService } from '@nestjs/jwt';
+import { Test, TestingModule } from '@nestjs/testing';
 import { TokenExpiredError } from 'jsonwebtoken';
-
-import { RefreshTokenService } from 'src/refresh-token/refresh-token.service';
 import { AuthService } from 'src/auth/auth.service';
-import { RefreshTokenRepository } from 'src/refresh-token/refresh-token.repository';
 import { UserSerializer } from 'src/auth/serializer/user.serializer';
-import { RefreshToken } from 'src/refresh-token/entities/refresh-token.entity';
 import { CustomHttpException } from 'src/exception/custom-http.exception';
-import { NotFoundException } from 'src/exception/not-found.exception';
 import { ForbiddenException } from 'src/exception/forbidden.exception';
+import { NotFoundException } from 'src/exception/not-found.exception';
 import { RefreshPaginateFilterDto } from 'src/refresh-token/dto/refresh-paginate-filter.dto';
+import { RefreshToken } from 'src/refresh-token/entities/refresh-token.entity';
+import { RefreshTokenRepository } from 'src/refresh-token/refresh-token.repository';
+import { RefreshTokenService } from 'src/refresh-token/refresh-token.service';
 
 const jwtServiceMock = () => ({
   signAsync: jest.fn(),

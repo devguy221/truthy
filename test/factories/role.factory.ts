@@ -1,7 +1,6 @@
-import { getRepository } from 'typeorm';
 import { faker } from '@faker-js/faker';
-
 import { RoleEntity } from 'src/role/entities/role.entity';
+import { getRepository } from 'typeorm';
 
 export class RoleFactory {
   static new() {

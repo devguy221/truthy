@@ -1,5 +1,4 @@
 import { Test } from '@nestjs/testing';
-
 import { AuthService } from 'src/auth/auth.service';
 import { IsUsernameAlreadyExist } from 'src/auth/pipes/username-unique-validation.pipes';
 

@@ -1,5 +1,5 @@
 server:
-  port: 7777
+  port: 7001
   origin: 'http://localhost:3000'
 
 db:
@@ -21,7 +21,7 @@ app:
   name: 'Truthy'
   version: 'v0.1'
   description: 'Official Truthy API'
-  appUrl: 'http://localhost:7777'
+  appUrl: 'http://localhost:7001'
   frontendUrl: 'http://localhost:3000'
   sameSite: true
 
