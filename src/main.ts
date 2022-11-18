@@ -18,15 +18,15 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(helmet());
   app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
+  app.setGlobalPrefix('api', {
+    exclude: [{ path: 'health', method: RequestMethod.GET }]
+  });
   const apiConfig = config.get('app');
   if (process.env.NODE_ENV === 'development') {
     app.enableCors({
       origin: true,
       methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
       credentials: true
-    });
-    app.setGlobalPrefix('api', {
-      exclude: [{ path: 'health', method: RequestMethod.GET }]
     });
     const swaggerConfig = new DocumentBuilder()
       .setTitle(apiConfig.name)

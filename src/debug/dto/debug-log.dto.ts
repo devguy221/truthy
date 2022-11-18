@@ -4,6 +4,10 @@ import { IsNotEmpty, ValidateIf } from 'class-validator';
 export class DebugLogDto {
   @ApiProperty()
   @IsNotEmpty()
+  tag: string;
+
+  @ApiProperty()
+  @IsNotEmpty()
   line: string;
 
   @ApiPropertyOptional()

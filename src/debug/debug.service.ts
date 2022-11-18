@@ -2,6 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { DebugLogDto } from 'src/debug/dto/debug-log.dto';
 import util = require('util');
 
+// const filter = 'EquitoFinance';
+const filter = 'TestTag';
+
 const Reset = '\x1b[0m';
 const Bright = '\x1b[1m';
 const Dim = '\x1b[2m';
@@ -38,11 +41,13 @@ const getColoredText = (text, color) => {
 @Injectable()
 export class DebugService {
   log(debugLogDto: DebugLogDto) {
-    console.log(
-      getColoredText('--- dev ---', FgMagenta),
-      getColoredText(debugLogDto.line, Dim),
-      util.inspect(debugLogDto.value, false, null, true)
-    );
+    if (debugLogDto.tag === filter) {
+      console.log(
+        getColoredText('--- dev ---', FgMagenta),
+        getColoredText(debugLogDto.line, Dim),
+        util.inspect(debugLogDto.value, false, null, true)
+      );
+    }
 
     return debugLogDto;
   }
