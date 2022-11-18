@@ -32,7 +32,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@aws-sdk/client-cloudwatch-logs": "^3.54.1",
     "@faker-js/faker": "^6.0.0",
     "@nestjs-modules/mailer": "^1.8.1",
     "@nestjs/bull": "^0.5.3",
@@ -47,7 +46,6 @@
     "@nestjs/throttler": "^2.0.1",
     "@nestjs/typeorm": "^8.0.3",
     "@types/cookie-parser": "^1.4.2",
-    "aws-sdk": "^2.1096.0",
     "bcrypt": "^5.0.0",
     "bull": "^4.7.0",
     "class-transformer": "^0.5.1",
@@ -75,8 +73,7 @@
     "typeorm-seeding": "^1.6.1",
     "ua-parser-js": "^1.0.2",
     "uuid": "^8.3.2",
-    "winston": "^3.6.0",
-    "winston-cloudwatch": "^3.2.0"
+    "winston": "^3.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
