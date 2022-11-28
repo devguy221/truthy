@@ -1,9 +1,10 @@
+/* eslint-disable unused-imports/no-unused-vars */
 import { Injectable } from '@nestjs/common';
 import { DebugLogDto } from 'src/debug/dto/debug-log.dto';
 import util = require('util');
 
 // const filter = 'EquitoFinance';
-const filter = 'TestTag';
+const filter = 'EquitoFinance';
 
 const Reset = '\x1b[0m';
 const Bright = '\x1b[1m';
