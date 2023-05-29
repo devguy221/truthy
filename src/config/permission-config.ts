@@ -64,63 +64,63 @@ export const PermissionConfiguration: PermissionConfigInterface = {
   ],
   defaultRoutes: [
     {
-      path: '/check',
+      path: '/api/check',
       method: MethodList.GET
     },
     {
-      path: '/auth/register',
+      path: '/api/auth/register',
       method: MethodList.POST
     },
     {
-      path: '/auth/login',
+      path: '/api/auth/login',
       method: MethodList.POST
     },
     {
-      path: '/auth/profile',
+      path: '/api/auth/profile',
       method: MethodList.GET
     },
     {
-      path: '/auth/activate-account',
+      path: '/api/auth/activate-account',
       method: MethodList.GET
     },
     {
-      path: '/auth/forgot-password',
+      path: '/api/auth/forgot-password',
       method: MethodList.PUT
     },
     {
-      path: '/auth/reset-password',
+      path: '/api/auth/reset-password',
       method: MethodList.PUT
     },
     {
-      path: '/auth/change-password',
+      path: '/api/auth/change-password',
       method: MethodList.PUT
     },
     {
-      path: '/auth/profile',
+      path: '/api/auth/profile',
       method: MethodList.PUT
     },
     {
-      path: '/revoke/:id',
+      path: '/api/revoke/:id',
       method: MethodList.PUT
     },
     {
-      path: '/auth/token-info',
+      path: '/api/auth/token-info',
       method: MethodList.GET
     },
     {
-      path: '/dashboard/users',
+      path: '/api/dashboard/users',
       method: MethodList.GET
     },
     {
-      path: '/dashboard/os',
+      path: '/api/dashboard/os',
       method: MethodList.GET
     },
     {
-      path: '/dashboard/browser',
+      path: '/api/dashboard/browser',
       method: MethodList.GET
     },
     {
-      path: '/logout',
+      path: '/api/logout',
       method: MethodList.POST
     }
   ],
@@ -134,7 +134,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'View all user',
           route: [
             {
-              path: '/users',
+              path: '/api/users',
               method: MethodList.GET
             }
           ]
@@ -143,7 +143,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Store new user',
           route: [
             {
-              path: '/users',
+              path: '/api/users',
               method: MethodList.POST
             }
           ]
@@ -152,7 +152,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Update user by id',
           route: [
             {
-              path: '/users/:id',
+              path: '/api/users/:id',
               method: MethodList.PUT
             }
           ]
@@ -161,7 +161,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Get user by id',
           route: [
             {
-              path: '/users/:id',
+              path: '/api/users/:id',
               method: MethodList.GET
             }
           ]
@@ -177,7 +177,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'View all role',
           route: [
             {
-              path: '/roles',
+              path: '/api/roles',
               method: MethodList.GET
             }
           ]
@@ -186,7 +186,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'View role by id',
           route: [
             {
-              path: '/roles/:id',
+              path: '/api/roles/:id',
               method: MethodList.GET
             }
           ]
@@ -195,7 +195,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Store new role',
           route: [
             {
-              path: '/roles',
+              path: '/api/roles',
               method: MethodList.POST
             }
           ]
@@ -204,7 +204,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Update role by id',
           route: [
             {
-              path: '/roles/:id',
+              path: '/api/roles/:id',
               method: MethodList.PUT
             }
           ]
@@ -213,7 +213,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Delete role by id',
           route: [
             {
-              path: '/roles/:id',
+              path: '/api/roles/:id',
               method: MethodList.DELETE
             }
           ]
@@ -229,7 +229,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'View all permission',
           route: [
             {
-              path: '/permissions',
+              path: '/api/permissions',
               method: MethodList.GET
             }
           ]
@@ -238,7 +238,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Sync permission from config',
           route: [
             {
-              path: '/permissions/sync',
+              path: '/api/permissions/sync',
               method: MethodList.POST
             }
           ]
@@ -247,7 +247,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'View permission by id',
           route: [
             {
-              path: '/permissions/:id',
+              path: '/api/permissions/:id',
               method: MethodList.GET
             }
           ]
@@ -256,7 +256,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Store new permission',
           route: [
             {
-              path: '/permissions',
+              path: '/api/permissions',
               method: MethodList.POST
             }
           ]
@@ -265,7 +265,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Update permission by id',
           route: [
             {
-              path: '/permissions/:id',
+              path: '/api/permissions/:id',
               method: MethodList.PUT
             }
           ]
@@ -274,7 +274,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Delete permission by id',
           route: [
             {
-              path: '/permissions/:id',
+              path: '/api/permissions/:id',
               method: MethodList.DELETE
             }
           ]
@@ -290,7 +290,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'View all email templates',
           route: [
             {
-              path: '/email-templates',
+              path: '/api/email-templates',
               method: MethodList.GET
             }
           ]
@@ -299,7 +299,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'View email templates by id',
           route: [
             {
-              path: '/email-templates/:id',
+              path: '/api/email-templates/:id',
               method: MethodList.GET
             }
           ]
@@ -308,7 +308,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Store new email templates',
           route: [
             {
-              path: '/email-templates',
+              path: '/api/email-templates',
               method: MethodList.POST
             }
           ]
@@ -317,7 +317,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Update email templates by id',
           route: [
             {
-              path: '/email-templates/:id',
+              path: '/api/email-templates/:id',
               method: MethodList.PUT
             }
           ]
@@ -326,7 +326,7 @@ export const PermissionConfiguration: PermissionConfigInterface = {
           name: 'Delete email templates by id',
           route: [
             {
-              path: '/email-templates/:id',
+              path: '/api/email-templates/:id',
               method: MethodList.DELETE
             }
           ]

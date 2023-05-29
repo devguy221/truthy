@@ -26,6 +26,7 @@ export class PermissionGuard implements CanActivate {
     if (permitted) {
       return true;
     }
+
     return this.checkIfUserHavePermission(request.user, permissionPayload);
   }
 
@@ -36,6 +37,7 @@ export class PermissionGuard implements CanActivate {
   checkIfDefaultRoute(permissionAgainst: RoutePayloadInterface) {
     const { path, method } = permissionAgainst;
     const defaultRoutes = PermissionConfiguration.defaultRoutes;
+
     return defaultRoutes.some(
       (route) => route.path === path && route.method === method
     );
@@ -56,6 +58,7 @@ export class PermissionGuard implements CanActivate {
         (route) => route.path === path && route.method === method
       );
     }
+
     return false;
   }
 }

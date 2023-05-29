@@ -3,7 +3,6 @@ import { Injectable } from '@nestjs/common';
 import { DebugLogDto } from 'src/debug/dto/debug-log.dto';
 import util = require('util');
 
-// const filter = 'EquitoFinance';
 const filter = 'EquitoFinance';
 
 const Reset = '\x1b[0m';
@@ -51,17 +50,5 @@ export class DebugService {
     }
 
     return debugLogDto;
-  }
-
-  findAll() {
-    return `This action returns all debug`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} debug`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} debug`;
   }
 }

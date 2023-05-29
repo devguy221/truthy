@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { SkipThrottle } from '@nestjs/throttler';
 import { DebugService } from 'src/debug/debug.service';
@@ -13,20 +13,5 @@ export class DebugController {
   @Post('log')
   log(@Body() debugLogDto: DebugLogDto) {
     return this.debugService.log(debugLogDto);
-  }
-
-  @Get()
-  findAll() {
-    return this.debugService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.debugService.findOne(+id);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.debugService.remove(+id);
   }
 }
